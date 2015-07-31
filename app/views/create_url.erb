@@ -1,0 +1,18 @@
+
+
+<div class="container">
+  <p>Welcome to RSit.zz!</p>
+  <form action = "/urls" method="post">
+    <input type="text" name="url_input">
+    <input type="submit" value="shorten it!">
+  </form>
+  <!-- put if @url so that only display error msg when url is createdornot localhost will be error too -->
+  <% if @url %> 
+    <% @url.errors.full_messages.each do |e| %>
+      <p><%= e %></p>
+    <% end %>
+  <% end %>
+
+
+</div>
+
